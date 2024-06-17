@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Введення значень двох дійсних змінних
+    double a, b;
+    cout << "Enter the value of a: ";
+    cin >> a;
+    cout << "Enter the value of b: ";
+    cin >> b;
+
+    // Оголошення покажчиків і їх ініціалізація
+    double* ptrA = &a;
+    double* ptrB = &b;
+
+    // Виведення початкових значень
+    cout << "Initial values: a = " << a << ", b = " << b << endl;
+
+    // Заміна значень змінних через покажчики
+    double temp = *ptrA;
+    *ptrA = *ptrB;
+    *ptrB = temp;
+
+    // Виведення значень після заміни
+    cout << "Values after swap: a = " << a << ", b = " << b << endl;
+
+    return 0;
+}
