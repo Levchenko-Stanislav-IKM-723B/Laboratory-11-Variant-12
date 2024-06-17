@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Оголошення двох покажчиків на цілий тип
+    int* ptrA;
+    int* ptrB;
+
+    // Виділення динамічної пам'яті для кожного покажчика
+    ptrA = new int;
+    ptrB = new int;
+
+    // Присвоєння довільних значень
+    *ptrA = 42;
+    *ptrB = 27;
+
+    // Виведення початкових значень
+    cout << "Initial values: *ptrA = " << *ptrA << ", *ptrB = " << *ptrB << endl;
+
+    // Заміна значень між покажчиками
+    int temp = *ptrA;
+    *ptrA = *ptrB;
+    *ptrB = temp;
+
+    // Виведення значень після заміни
+    cout << "Values after swap: *ptrA = " << *ptrA << ", *ptrB = " << *ptrB << endl;
+
+    // Звільнення динамічної пам'яті
+    delete ptrA;
+    delete ptrB;
+
+    return 0;
+}
